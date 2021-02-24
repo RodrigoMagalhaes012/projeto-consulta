@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/home/favicon.png" type="image/ico" />
+    <link rel="stylesheet" href="class/alert/css/class_alert.css" id="theme-styles">
+    <link href="class/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="class/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="mod_rh\css\home.css" rel="stylesheet"> -->
+
+    <link href="mod_rh\css\animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="class\alert\css\class_alert.css" id="theme-styles">
+
+    <title>Portal</title>
+
+    <!-- home Theme Style -->
+
+    <style>
+        body{
+            font-size: 9px;
+        }
+        input,
+        textarea {
+            text-transform: uppercase;
+        }
+
+        #negrito tr td {
+            font-weight: bolder;
+        }
+
+        table tr td {
+            color: black;
+            padding: 4px !important;
+        }
+
+        table tr #subtitulo {
+            color: #8B8989;
+        }
+
+        table tr th {
+            color: black;
+        }
+
+        #proventos {
+            color: #0000CD;
+        }
+
+        #descontos {
+            color: #B50600;
+        }
+
+        #liquido {
+            color: #006400;
+        }
+
+        #c_proventos {
+            color: #0000CD;
+        }
+
+        #c_descontos {
+            color: #B50600;
+        }
+
+        #c_liquido {
+            color: #006400;
+        }
+
+        #titulo {
+            background-color: #B8B8B8;
+            color: #4D4D4D;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div id="detalhes_holerite" class="row">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th style="font-size: 14px;" id="titulo" class="c_recibo_pagamento text-center" scope="col">RECIBO DE PAGAMENTO</th>
+                        <th id="titulo" class="c_calculo_mensal text-center" scope="col">[v_competencia]</th>
+                        <th id="titulo" class="c_matricula text-center" scope="col">[v_matricula]</th>
+                        <!-- <th id="titulo" class="c_matricula" scope="col">[caminho]</th> -->
+                    </tr>
+                </thead>
+            </table>
+            <div class="col-sm-12">
+                <table class="table table-sm" id="negrito">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="subtitulo">RAZÃO SOCIAL</div>
+                                <div id="c_nome_empresa">[v_razao_social]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">CNPJ</div>
+                                <div id="c_cnpj">[v_cnpj]</div>
+                            </td>
+                            <td class="text-right">
+                                [v_logo]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="subtitulo">NOME</div>
+                                <div id="c_nome_colaborador">[v_nome]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">CPF</div>
+                                <div id="c_cpf">[v_cpf]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">PIS</div>
+                                <div id="c_pis">[v_pis]</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="subtitulo">DEPARTAMENTO</div>
+                                <div id="c_departamento">[v_departamento]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">CARGO/FUNÇÃO</div>
+                                <div id="c_cargo">[v_cargo]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">CBO</div>
+                                <div id="c_cbo">[v_cbo]</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="subtitulo">ADMISSÃO</div>
+                                <div id="c_admissao">[v_admissao]</div>
+                            </td>
+                            <td>
+                                <div id="subtitulo">SALÁRIO BASE</div>
+                                <div id="c_salario_base">[v_salario_base]</div>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                <table id="tabela_valores" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">CÓD</th>
+                            <th class="text-center">DESCRIÇÃO</th>
+                            <th class="text-center">REFERÊNCIA</th>
+                            <th class="text-center" id="proventos">PROVENTOS (+)</th>
+                            <th class="text-center" id="descontos">DESCONTOS (-)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        [v_competencias]
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th id="proventos" class="text-center">Total de Proventos</th>
+                            <th id="descontos" class="text-center">Total de Descontos</th>
+                            <th id="liquido" class="text-center">Total Líquido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="c_proventos" class="text-center">[v_total_proventos]</td>
+                            <td id="c_descontos" class="text-center">[v_total_descontos]</td>
+                            <td id="c_liquido" class="text-center">[v_total_liquido]</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="tabela_bases" class="table table-bordered table-sm">
+                    <tbody>
+                        <tr>
+                            <td>[v_base_inss]</td>
+                            <td>[v_base_fgts]</td>
+                            <td>[v_fgts_mes]</td>
+                        </tr>
+                        <tr>
+                            <td>[v_base_irrf]</td>
+                            <td>[v_dep_ir]</td>
+                            <td>[v_dep_sf]</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="row">
+            <div id="c_msg_autentica" class="col-sm-12">
+                [v_assinatura]
+            </div>
+        </div>
+        <div class="row">
+            <div id="c_msg_responsabilidade" class="col-sm-12">
+                Todas as informações contidas nesse documento são de responsabilidade da empresa pagadora.
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="class\jquery\dist\jquery.min.js"></script>
+    <script src="class\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="class\alert\js\class_alert.js"></script>
+    <script src="class\jquery\dist\jquery.mask.min.js"></script>
+    <script src="mod_rh\js\home.js"></script> -->
+
+</body>
+
+</html>

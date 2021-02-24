@@ -1,0 +1,53 @@
+/* Code By Webdevtrick ( https://webdevtrick.com )  */
+body {
+    font-family: 'Lato', sans-serif;
+    background: #eeeeee;
+}
+.form-horizontal {
+background: white;
+}
+.container {
+margin-top: 10%;
+}
+.progress {
+    height: 5px;
+}
+.control-label {
+    text-align: left !important;
+    padding-bottom: 7px;
+}
+.form-horizontal {
+    padding: 25px 20px;
+    border: 2px solid #e8eaed;
+    border-radius: 5px;
+}
+.fa-times {
+    color: red;
+}
+
+/* Code By Webdevtrick ( https://webdevtrick.com )  */
+body {
+    font-family: 'Lato', sans-serif;
+    background: #eeeeee;
+}
+.form-horizontal {
+background: white;
+}
+.container {
+margin-top: 10%;
+}
+.progress {
+    height: 5px;
+}
+.control-label {
+    text-align: left !important;
+    padding-bottom: 7px;
+}
+.form-horizontal {
+    padding: 25px 20px;
+    border: 2px solid #e8eaed;
+    border-radius: 5px;
+}
+.fa-times {
+    color: red;
+}

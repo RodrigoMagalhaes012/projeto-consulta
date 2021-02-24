@@ -1,0 +1,101 @@
+body{
+  font-family: sans-serif;
+}
+
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  /* background-color: #502479; */
+  border: none;
+  /* box-shadow: 0 1px 5px rgba(0,0,0,.4); */
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button:focus{
+  outline: none;
+}
+
+.fab button.main{
+  background-image: url('../img/central_uni.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(50, 115, 220, 0);
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin-right: 15px;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab.show button.main,
+.fab.show button.main{
+  outline: none;
+    /* background-color: #502479; */
+  /* box-shadow: 0 3px 8px rgba(0,0,0,.5); */
+ }
+
+.fab.show button.main + ul,
+.fab.show button.main + ul{
+  bottom: 70px;
+}
+
+.fab.show button.main + ul li,
+.fab.show button.main + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+#opcao1{
+  background-color: #372399;
+}
+
+#opcao2{
+  background-color: #372399;
+}
+
+#opcao3{
+  background-color: #372399;
+}
